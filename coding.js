@@ -11,6 +11,7 @@ function addToZero(arr){
 // console.log(addToZero([1, 2, 3, -2]))
 // console.log(addToZero([1, 2, 3]))
 // time O(n^2)
+// space O(n)
 
 function hasUniqueChars(word) {
     let uniqueChars = new Set([])
@@ -21,8 +22,20 @@ function hasUniqueChars(word) {
   }
 
 //   time O(n)
+//   space O(n^2)
 //   console.log(hasUniqueChars("Monday"))
 //   console.log(hasUniqueChars("Moonday"))
+
+
+// time O(n)
+// space O(n)
+const pangram = (string) => {
+    return new Set(string.toLowerCase().match(/[a-z]/g)).size === 26
+};
+
+console.log(pangram("The quick brown fox jumps over the lazy dog!"))
+
+
 
 function findLongest(arr){
     let longestword = 0
@@ -35,3 +48,4 @@ function findLongest(arr){
 }
 // console.log(findLongest(["hi", "hello"]))
 // time O(n)
+// space O(n^2)
